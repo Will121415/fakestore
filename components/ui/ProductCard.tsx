@@ -1,5 +1,5 @@
 import { AddShoppingCart } from '@mui/icons-material';
-import { Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
+import { Badge, Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import React, { FC } from 'react'
 import { Product } from '../../interfaces/product';
 
@@ -7,21 +7,27 @@ interface Props {
     product: Product
 }
 
-const ProductCard:FC<Props> = ({product}) => {
+const ProductCard: FC<Props> = ({ product }) => {
     return (
 
-        <Grid  
-            css={{ height: '500px', width: '300px'}}
+        <Grid
+            css={{ width: '300px'}}
             xs={12} sm={4} md={3}
             onMouseEnter={() => console.log('Mouse enter')}
 
-        
+
         >
             <Card isHoverable isPressable variant='bordered'>
+
                 <Card.Header>
                     <Col>
-                        <Text b>{product.title}</Text>
-                        <Spacer/>
+                        <Row justify="space-between">
+                            <Text b>{product.title}</Text>
+                            <Badge disableOutline color="success" size={'xs'}>
+                                New
+                            </Badge>
+                        </Row>
+                        <Spacer />
                         <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$xl" }}>
                             $ {product.price}
                         </Text>
@@ -32,14 +38,13 @@ const ProductCard:FC<Props> = ({product}) => {
                     <Card.Image
                         src={product.image}
                         objectFit='fill'
-                        width={500}
+                        width={200}
+                        height={300}
                     />
                 </Card.Body>
                 <Card.Divider />
                 <Card.Footer>
-                    <Row justify="center">
-                        <Button style={{ width: '100%' }} ghost>Agree</Button>
-                    </Row>
+                    <Button css={{ width: '100%', m: '5px' }} ghost>Agree</Button>
                 </Card.Footer>
             </Card>
         </Grid>
