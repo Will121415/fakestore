@@ -1,5 +1,4 @@
 import { Rating } from '@geist-ui/core';
-import { AddShoppingCart } from '@mui/icons-material';
 import { Badge, Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import React, { FC } from 'react'
 import { Product } from '../../interfaces/product';

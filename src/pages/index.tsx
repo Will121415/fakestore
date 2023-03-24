@@ -9,6 +9,7 @@ import { Grid, Text } from "@nextui-org/react"
 import { FC } from 'react';
 
 import ProductCard from '../../components/ui/ProductCard';
+import Layout from '../../components/layouts/navbar/Layout';
 
 interface Props {
   products: Product[];
@@ -21,22 +22,24 @@ const Home: FC<Props> = ({ products }) => {
   console.log(products[0])
 
   return (
-    <WifinetLayout title='Home Page' description='Pagina de inicio para ver productos'>
+    <Layout>
+      <WifinetLayout title='Home Page' description='Pagina de inicio para ver productos'>
 
-      <Text h1>Productos</Text>
+        <Text h1>Productos</Text>
 
-      <Grid.Container gap={2} justify="center">
+        <Grid.Container gap={2} justify="center">
           {
-            products.map( (product) => {
+            products.map((product) => {
               return (
-                  <ProductCard  key={product.id} product={product} /> 
+                <ProductCard key={product.id} product={product} />
               )
             })
           }
         </Grid.Container>
 
 
-    </WifinetLayout>
+      </WifinetLayout>
+    </Layout>
   )
 }
 

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React, { FC } from 'react'
+import NavBar from '../ui/NavBar';
 
 interface Props {
     title: string;
@@ -28,10 +29,6 @@ export const WifinetLayout: FC<Props> = ({ children, title, description, imageFu
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-            <nav>
-                {/* TODO: Navbar */}
-            </nav>
 
             {/* SideMenu */}
 

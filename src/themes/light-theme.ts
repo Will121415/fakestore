@@ -11,6 +11,10 @@ import { createTheme, NextUIProvider } from "@nextui-org/react"
       primary: '#4ADE7B',
       secondary: '#F9CB80',
       error: '#FCC5D8',
+      success: '#4ADE7B',
+      warning: '#F9CB80',
+      background: '#FFFFFF',
+      surface: '#000000',
     },
   }
 })
