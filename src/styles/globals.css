@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(242, 235, 243) 0%,
+    rgb(234, 241, 249) 90.1%
+  );
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* .profile-container:hover */
+.profile-container {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: rgba(39, 39, 39, 0.44) 0px 5px 20px;
+  border-radius: 9px;
+  transition: 1s all ease;
+}
+
+.profile-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/public/bg.png") no-repeat center center/cover;
+  z-index: -1;
+  opacity: 1;
+  transition: all 0.5s ease-in;
+}
+
+.profile-container:hover:before {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* Profile Card Wrapper */
+.profile-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #008587 0%, #1a7c97 100%);
+  transform: skew(30deg) translateX(125%);
+  opacity: 0.9;
+  transition: all 0.6s ease;
+}
+
+.profile-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0.5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #008587 0%, #1a7c97 100%);
+  transform: skew(30deg) translateX(-125%);
+  opacity: 0.9;
+  transition: all 0.6s ease;
+}
+
+.profile-container:hover .profile-wrapper::after {
+  transform: skew(30deg) translateX(125%);
+  background: linear-gradient(to right, #008587 0%, #1a7c97 100%);
+}
+.profile-container:hover .profile-wrapper::before {
+  transform: skew(30deg) translateX(-125%);
+  background: linear-gradient(to right, #008587 0%, #1a7c97 100%);
+}
+
+/* Profile Card */
+.profile-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.6rem 12px;
+  position: relative;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.profile-container:hover .profile-card {
+  opacity: 1;
+  transition: all 0.6s ease;
+  transition-delay: 0.2s;
+}
+
+/* Profile Picture */
+.profile-card img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1rem 0;
+  margin-top: -0.05rem;
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  position: relative;
+}
+
+.profile-card h2 {
+  line-height: 1.2;
+  margin-top: -0.1rem;
+  margin-bottom: 0.2rem;
+  color: #222;
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+}
+.profile-card h4 {
+  line-height: 1.5;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: rgb(103, 103, 103);
+}
+
+.profile-card p {
+  line-height: 1.5;
+  color: #333;
+  font-weight: 400;
+  margin: 12px 0;
+  width: 92%;
+  letter-spacing: 0.2px;
+  font-size: 0.8rem;
+}
+
+/* Profile Icons */
+.profile-card .icons {
+  display: flex;
+  color: #444;
+  width: 80%;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  margin: 4px 0;
+}
+
+.profile-card .icons i {
+  transition: 0.2s;
+}
+
+.profile-card .icons i:hover {
+  transform: translateY(-5px);
+  color: #000;
+}
+
+/* Profile Button */
+.profile-card a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 8px 20px;
+  margin-top: 1rem;
+  background: #5b6072;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.profile-card a:hover {
+  box-shadow: rgba(0, 0, 0, 0.177) 0px 5px 15px;
+  background: #4a6ae8;
+}
+
+.shape-1 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+  animation: heroDecoAnim 3s linear infinite alternate;
+  top: 5%;
+  right: 78%;
+}
+
+@keyframes heroDecoAnim {
+  0% {
+    transform: translateY(40px) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0.4turn);
+  }
+}
