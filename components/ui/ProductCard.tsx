@@ -1,3 +1,4 @@
+import { Rating } from '@geist-ui/core';
 import { AddShoppingCart } from '@mui/icons-material';
 import { Badge, Button, Card, Col, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import React, { FC } from 'react'
@@ -28,9 +29,12 @@ const ProductCard: FC<Props> = ({ product }) => {
                             </Badge>
                         </Row>
                         <Spacer />
-                        <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$xl" }}>
-                            $ {product.price}
-                        </Text>
+                        <Row justify='space-between'>
+                            <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$xl" }}>
+                                $ {product.price}
+                            </Text>
+                            <Rating  value={product.rating.rate } type='warning' locked/>    
+                        </Row>
                     </Col>
                 </Card.Header>
                 <Card.Divider />

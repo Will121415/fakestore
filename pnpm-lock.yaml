@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@emotion/react': ^11.10.6
   '@emotion/styled': ^11.10.6
+  '@geist-ui/core': ^2.3.8
   '@mui/icons-material': ^5.11.11
   '@mui/material': ^5.11.13
   '@nextui-org/react': 1.0.0-beta.12
@@ -21,6 +22,7 @@ specifiers:
 dependencies:
   '@emotion/react': 11.10.6_pmekkgnqduwlme35zpnqhenc34
   '@emotion/styled': 11.10.6_oouaibmszuch5k64ms7uxp2aia
+  '@geist-ui/core': 2.3.8_biqbaboplfbrettd7655fr4n2y
   '@mui/icons-material': 5.11.11_4lyzeezzeeal3x6jtb4ni26w7u
   '@mui/material': 5.11.13_xqeqsl5kvjjtyxwyi3jhw3yuli
   '@nextui-org/react': 1.0.0-beta.12_biqbaboplfbrettd7655fr4n2y
@@ -272,6 +274,17 @@ packages:
     resolution: {integrity: sha512-k/MEBstff4sttohyEpXxCmC3MqbUn9VvHGlZ8fauLzkbwXmVrEeyzS+4uhrvAk9DWU9/7otYWxyDox4nT/KVLQ==}
     dependencies:
       tslib: 2.5.0
+    dev: false
+
+  /@geist-ui/core/2.3.8_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-OKwGgTA4+fBM41eQbqDoUj4XBycZbYH7Ynrn6LPO5yKX7zeWPu/R7HN3vB4/oHt34VTDQI5sDNb1SirHvNyB5w==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
